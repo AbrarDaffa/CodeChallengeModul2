@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoD Camo Mastery Services</title>
+    <style>
+        body { 
+            font-family: Impact; 
+            color: #ffffff;
+            text-align: center; 
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        header, nav, section, article, footer { 
+            margin: 20px auto; 
+            padding: 20px; 
+            text-align: center; 
+            max-width: 600px; 
+            background-color: rgba(0, 0, 0, 0.5); 
+            border-radius: 8px;
+        }
+        nav ul { 
+            list-style-type: none; 
+        }
+        nav ul li { 
+            display: inline; 
+            margin-right: 10px; 
+        }
+        article { 
+            margin-top: 20px; 
+        }
+        footer { 
+            font-size: 0.8em; 
+            text-align: center; 
+        }
+        .hidden { 
+            display: none; 
+        }
+        img { 
+            width: 100%; 
+            max-width: 200px; 
+            height: auto; 
+        }
+     .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 50%;
+            padding: 10px;
+        }
+        .mobile-menu-icon {
+            color: #ffffff;
+            font-size: 24px;
+            cursor: pointer;
+            width: 26px;
+            height: 20px;
+            line-height: 20px;
+        }
+        .mobile-menu-links {
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 20px;
+            z-index: 999;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 8px;
+            padding: 10px;
+            width: 200px;
+            text-align: left;
+        }
+        .mobile-menu-links a {
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 5px 10px;
+            margin-bottom: 5px;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="home.html"><img src="icon.jpg" alt="Home" class="home-icon"></a>
+        <div class="mobile-menu-icon" onclick="toggleMobileMenu()">☰</div>
+        <ul class="mobile-menu-links" id="mobileMenu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="ourteam.html">Our Team</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="showPopup(); return false;">
+        <label for="email" style="color: #ffffff;">Your Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="message" style="color: #ffffff;">Message:</label><br>
+        <textarea id="message" name="message" required></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+</section>
+
+<footer>
+    <p>&copy; Abesaurus 2024</p>
+    <p>We are not sponsored with Call of Duty by any means, with that said all due copyright is owned by Activision.</p>
+</footer>
+
+<script>
+    function toggleMobileMenu() {
+        var menu = document.getElementById("mobileMenu");
+        if (menu.style.display === "block") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "block";
+        }
+    }
+
+    function showPopup() {
+        alert("We will come back to you within 24 Hours. Thank You!");
+        
+    }
+</script>
+
+</body>
+</html>
